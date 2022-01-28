@@ -1,0 +1,69 @@
+.about {
+   background-color: $eleventh;
+   margin: 0 auto;
+   width: 100%; 
+   padding: 110px 0;
+
+   &__header {
+      @include flex-box(column, center, center);
+    
+   }
+
+   &__line {
+      background-color: $seventeenth;
+   }
+
+
+   &__parent {
+      // display: flex;
+      // // flex-direction: row;
+      // justify-content: flex-start;
+      // align-items: flex-start;
+      @include flex-box(flex-start, flex-start);
+      padding: 65px 0;
+   }
+
+   &__list {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 75px 20px;
+   }
+
+   &__item {
+      width: 50%;
+
+      &--image {
+         width: 160px;
+         height: 160px;
+
+      }
+   }
+
+   &__description{
+      font-size: 21px;
+      color: $third;
+      font-weight: 400;
+      font-style: italic;
+      // padding-top: 47px;
+   }
+
+   &__author {
+      padding-top: 17px;
+      font-size: 24px;
+      text-transform: uppercase;
+      color: $third;
+      font-weight: bold;
+      text-align: start;
+    
+   }
+
+   &__role {
+      font-size: 18px;
+      font-weight: 400;
+      color: $fourteenth;
+      text-align: start;
+      padding-top: 14px;
+    
+   }
+ 
+}

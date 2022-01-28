@@ -1,0 +1,54 @@
+.service {
+   background-color: $secondary;
+   margin: 0 auto;
+   width: 100%;
+   padding: 102px 0;
+
+
+   &__content {
+      padding: 5px 42px;
+
+   }
+
+   &__header {
+      @include flex-box(column, center, center);
+   }
+
+   &__line {
+      background-color: $fourth; 
+   }
+
+   &__text {
+      padding: 0px  157px;
+   }
+
+   &__list {
+      @include flex-box(center, center);
+      margin-top: 78px;
+   }
+
+   &__item {
+      margin: 0 15px;
+      @include flex-box(column, center, center);
+
+   }
+
+   &__name {
+      color: $third;
+      font-size: 24px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-top: 55px;
+      text-align: center;
+
+   }
+   &__description {
+      color: $third;
+      font-size: 16px;
+      font-weight: 300;
+      text-align: center;
+      margin-top: 19px;
+      padding: 5px 10px;
+   }
+
+}

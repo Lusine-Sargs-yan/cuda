@@ -1,0 +1,451 @@
+@mixin flex-box($direction:row, $justify:stretch, $align:stretch) {
+   display: flex;
+   flex-direction: $direction;
+   justify-content: $justify;
+   align-items: $align;
+
+}
+
+/* 1440, 1200, 995,  768, 575, 375*//*container 1143*/
+@mixin tablet-media {
+   @media screen and (max-width: 1440px) {
+      .container {
+        width: 90%;
+      }
+
+      .header {
+         &__item {
+            margin: 0 3px;
+         }
+      }
+    
+   }
+
+   @media screen and (max-width: 1200px) {
+      .header {
+         &__item {
+            margin: 0 3px;
+         }
+      }
+
+      .intro {
+         &__title {
+            font-size: 36px;
+         }
+
+      }
+      .team {
+         &__item {
+            margin: 0 20px;
+         }
+      }
+      .skill {
+         &__item {
+            margin: 0 20px;
+         }
+         &__text {
+            padding: 0 180px;
+         }
+      }
+      .portfolio {
+         &__item {
+            width: 50%;
+            padding-right: 20px;
+            padding-left: 20px;
+         }
+      }
+    
+   }
+
+
+   @media screen and (max-width: 995px) {
+
+      .header {
+         &__nav {
+            display: none;
+         }
+         &__burger-icon {
+            display: block;
+            width: 10%;
+         }
+      }
+      .intro {
+         &__title {
+            font-size: 28px;
+         }
+   
+      }
+
+      .service {
+         &__text {
+            padding: 0px 110px;
+         }
+
+         &__list {
+            flex-wrap: wrap;
+         }
+      
+         &__item {
+            margin: 25px 0;
+            width: 50%;
+         }
+         &__description {
+            padding: 5px 75px;
+         }
+
+      }
+
+      .team {
+         &__list {
+            flex-wrap: wrap;
+         }
+      
+         &__item {
+            margin: 20px 0px;
+            width: 50%;
+         }
+
+         &__description {
+            padding: 15px 90px;
+            margin: unset;
+         }
+
+      }
+
+      .skill {
+         &__list {
+            flex-wrap: wrap;
+         }
+        
+          &__item {
+            margin: 30px 0;
+            width: 50%;
+         }
+
+         &__text {
+            color: $sixth;
+            padding: 0px 120px;
+         }
+      }
+
+      .portfolio {
+         &__text {
+            padding: 0px 170px 45px 170px;
+         }
+      }
+      .about {
+         &__parent {
+            padding: 25px 0;
+         }
+      
+         &__item {
+            width: 100%;
+            @include flex-box(column, center, center);
+         }
+         &__description { 
+            padding: 24px 50px 0 50px;
+            text-align: center;
+         }
+         
+
+      }
+
+      
+      .touch {
+         &__text {
+            padding: 0 150px;
+         }
+
+
+         &__form {
+            &--inputs {
+      
+               &--inner {
+                  padding: 22px 65px;
+               }
+               &--content {
+                  padding: 71px 190px;
+
+               }
+            }
+         }
+      
+      }
+   
+      .footer {
+         &__link {
+            font-size: 18px;
+      
+         }
+
+         &__item {
+            margin: 0 15px;
+         }
+      
+      }
+   
+   }
+
+
+   @media screen and (max-width: 768px) {
+      .main-title {
+         font-size: 30px;
+         letter-spacing: 2px;
+      }
+
+      .service {
+         &__text {
+            padding: unset;
+         }
+
+         &__item {
+            margin: 15px 0;
+         }
+         &__description {
+            padding: 5px 25px;
+         }
+
+      }
+
+      .team {
+         &__description {
+            padding: 15px 45px;
+         }
+      }
+
+      .skill {
+         &__text {
+            padding: 0px 50px;
+         }
+      }
+
+      .portfolio {
+         &__text {
+            padding: 0px 100px 45px 100px;
+         }
+
+         &__name {
+            font-size: 16px; 
+         }
+
+
+         &__category {
+            &--item {
+               margin: 0 5px; 
+               &--btn {
+                  font-size: 16px;
+               }
+            } 
+         }
+            
+      }
+      .about {
+         &__description { 
+            padding: unset;
+            padding-top: 24px;
+         }
+      }
+
+      .touch {
+         &__text {
+            padding: 0 100px;
+         }
+
+
+         &__form {
+            &--inputs {
+      
+               &--inner {
+                  padding: 22px 45px;
+               }
+               &--content {
+                  padding: 71px 150px;
+
+               }
+            }
+         }
+      
+      }
+
+      .footer {
+
+         &__list {
+            @include flex-box(center, center);
+         }
+         
+         &__item {
+            margin: 0 7px;
+         }
+         
+      
+      }
+
+   
+
+   }
+
+   @media screen and (max-width: 575px) {
+
+      .intro {
+         &__title {
+            font-size: 22px;
+         }
+   
+      }
+      .base-line,
+      .main-description {
+         display: none;
+      }
+      
+      .main-title {
+         font-size: 20px;
+         letter-spacing: 1px;
+      }
+   
+      .skill {
+         &__text {
+            padding: unset;
+         }
+      }
+
+      .service {
+         &__item {
+            width: 100%;
+         }
+         &__description {
+            padding: 5px 80px;
+         }
+
+      }
+      .team {
+         &__item {
+            width: 100%;
+         }
+
+         &__description {
+            padding: 15px 90px;
+         }
+      }
+
+      
+      .skill {
+         &__item {
+            width: 100%;
+         }
+      }
+
+      
+      .portfolio {
+
+         &__category {
+            margin-top: 25px;
+      
+            &--item {
+      
+               &--btn {
+                  padding: 10px 10px;
+                  font-size: 14px;
+      
+               }
+            }
+      
+         }
+
+         &__item {
+            width: 100%;
+
+         }
+      }
+
+      .base-btn {
+         font-size: 16px;
+         padding: 25px 50px;
+      }
+
+      .about {
+         &__parent {
+            @include flex-box(column, center, center);
+         }
+
+         &__description {
+            font-style: normal;
+            padding: 25px 50px 0 50px;
+
+         }
+      }
+
+      .touch {
+         &__text {
+            padding: 0 50px;
+         }
+
+
+         &__form {
+            &--inputs {
+               @include flex-box(column, center, center);
+      
+               &--inner {
+                  padding: 22px 80px;
+                  margin: 10px 0;
+               }
+               &--content {
+                  padding: 71px 50px;
+
+               }
+            }
+         }
+      
+      }
+
+      .footer {
+         &__list {
+            @include flex-box(column, center, center);
+         }
+         
+         &__item {
+            margin: 5px 0;
+         }
+      
+      }
+
+   }
+
+   @media screen and (max-width: 375px) {
+      .header {
+         &__burger-icon {
+            width: 20%;
+         }
+      }
+      .intro {
+         &__title {
+            display: none;
+         }
+   
+      }
+
+      
+      .service {
+         &__description {
+            padding: 5px 10px;
+         }
+
+      }
+
+      
+      .about {
+         &__description {
+            padding: 25px 0 0 0;
+
+         }
+      }
+
+      .team {
+         &__description {
+            padding: 15px 50px;
+         }
+      }
+
+   }
+
+}
+

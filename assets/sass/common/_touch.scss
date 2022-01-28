@@ -1,0 +1,106 @@
+.touch {
+   margin: 0 auto;
+   background-color: $eighteenth;
+   width: 100%;
+   padding: 110px 0;
+
+   &__header {
+      @include flex-box(column, center, center); 
+      margin-bottom: 57px;  
+   }
+
+   &__line {
+      background-color: $nineteenth;
+
+   }
+
+   &__form {
+      @include flex-box(column, center, center);
+      margin-top: 13px;
+      box-sizing: border-box;
+
+      &--inputs {
+         @include flex-box(space-between, center);
+
+         &--item {
+            position: relative;
+            margin: 0 10px;
+         }
+
+         &--inner {
+            background-color: $nineteenth;
+            border: none;
+            border-radius: 4px;
+            padding: 22px 118px;
+            outline: none;
+         }
+         &--fake-placeholder-name {
+            position: absolute;
+            top: 15px;
+            left: 13px;
+            color: $third;
+            font-size: 18px;
+         }
+         &--fake-placeholder-aster {
+            position: absolute;
+            color: $twentieth;
+            top: 2px;
+            left: 83px;
+            font-size: 18px;
+         }
+         &--inner:focus + &--fake-placeholder-name,
+         &--inner:focus + &--fake-placeholder-aster {
+            display: none;
+         }  
+
+         &--content {
+            background-color: $nineteenth;
+            border: none;
+            padding: 71px 291px;
+            border-radius: 4px;
+            outline: none;
+            resize: none;
+            background-image: url(../media/images/Arrow.png);
+            background-position: left 99% bottom 2%;
+            background-repeat: no-repeat;
+         }
+
+         &--fake-placeholder-message-aster {
+            position: absolute;
+            color: $twentieth;
+            top: 2px;
+            left: 107px;
+            font-size: 18px;
+         }
+
+         &--content:focus + &--fake-placeholder-name,
+         &--content:focus + &--fake-placeholder-message-aster {
+            display: none;
+         }
+      }
+
+      &--large-input {
+         @include flex-box(center, center);
+      }
+
+      &--area {
+         position: relative;
+         //margin-top: 20px; 
+      }
+  
+   }
+   &__btn {
+      background-color: $ninth;
+      box-shadow: 0px 4px 0px 0px $twenty-first;
+      margin-top: 75px;
+      margin-bottom: 110px;
+
+      &:hover {
+         background-color: $twenty-first;
+
+      }
+
+   }
+
+
+}

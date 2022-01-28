@@ -1,0 +1,153 @@
+.skill {
+  margin: 0 auto;
+  width: 100%;
+  padding: 97px 0;
+
+  &__content {
+    padding: 65px 0;
+  }
+
+  &__header {
+    @include flex-box(column, center, center);
+  }
+
+  &__title {
+    color: $sixth;
+  }
+
+  &__line {
+    background-color: $tenth;
+  }
+
+  &__text {
+    color: $sixth;
+    padding: 0px 285px;
+  }
+
+  &__list {
+    @include flex-box(center, center);
+    padding: 80px 0;
+  }
+
+  &__item {
+    margin: 0 50px;
+    @include flex-box(column, center, center);
+    // margin-top: 25px;
+    // padding: 40px 30px;
+  }
+
+  &__name {
+    text-transform: uppercase;
+    font-size: 24px;
+    color: $sixth;
+    font-weight: 700;
+    text-align: center;
+    @include flex-box(center, center);
+    padding-top: 40px;
+  }
+
+  &__circle {
+    height: 200px;
+    width: 200px;
+    display: inline-block;
+    box-sizing: border-box;
+    box-shadow: -3px -3px 7px #ffffffb2,
+      inset 3px 3px 5px rgba(94, 104, 121, 0.945);
+    /* background-color: #dfe8ed; */
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+
+      &::after {
+         content: "";
+         position: absolute;
+         height: 80%;
+         width: 80%;
+         border-radius: 50%;
+         top: 50%;
+         left: 50%;
+         transform: translate(50%, 50%);
+         box-shadow: inset -3px -3px 7px #ffffffb2,
+        3px 3px 5px rgba(94, 103, 121, 0.9);
+      }
+   }
+  &__html-css {
+    stroke: $eleventh;
+    animation: my-html-css-anim 1s linear forwards;
+  }
+
+  &__graphic-design {
+    stroke: $twelvth;
+    animation: my-graphic-design-anim 1s linear forwards;
+  }
+  &__ui-ux {
+    stroke: $thireenth;
+    animation: my-ui-ux-anim 1s linear forwards;
+  }
+
+  &__percent {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: $sixth;
+    font-weight: 300;
+    text-align: center;
+  }
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  fill: none;
+}
+
+circle {
+  position: absolute;
+  transform: scale(0.93);
+  transform-origin: center;
+  stroke: $ninth;
+  stroke-width: 29px;
+  stroke-dasharray: 629px;
+  stroke-dashoffset: 629px;
+  animation: my-circle-anim 1s linear forwards;
+  transform: rotate(270deg);
+}
+
+@keyframes my-circle-anim {
+  0% {
+    stroke-dashoffset: 629px;
+  }
+  100% {
+    stroke-dashoffset: calc(629px - (629px * 90) / 100);
+  }
+}
+
+@keyframes my-html-css-anim {
+  0% {
+    stroke-dashoffset: 629px;
+  }
+  100% {
+    stroke-dashoffset: calc(629px - (629px * 75) / 100);
+  }
+}
+
+@keyframes my-graphic-design-anim {
+  0% {
+    stroke-dashoffset: 629px;
+  }
+  100% {
+    stroke-dashoffset: calc(629px - (629px * 70) / 100);
+  }
+}
+
+@keyframes my-ui-ux-anim {
+  0% {
+    stroke-dashoffset: 629px;
+  }
+  100% {
+    stroke-dashoffset: calc(629px - (629px * 85) / 100);
+  }
+}

@@ -1,0 +1,55 @@
+@import "./UI/var";
+@import "./UI/extends";
+@import "./UI/main-title";
+@import "./UI/base-line";
+@import "./UI/main-description";
+@import "./UI/base-btn";
+@import "./UI/mixins";
+@import "./UI/main-content";
+
+/*Header*/ 
+@import "./common/header";
+
+/*Services*/
+@import "./common/service";
+
+/*Team*/
+@import "./common/team";
+
+/*Skills*/
+@import "./common/skill";
+
+/*Portfolio*/
+@import "./common/portfolio";
+
+/*About*/
+@import "./common/about";
+
+/*Touch*/
+@import "./common/touch";
+
+/*Footer*/
+@import "./common/footer";
+
+
+
+html,
+body {
+  font-family: "Titillium Web", sans-serif;
+}
+
+.container {
+  width: 1143px;
+  margin: 0 auto;
+}
+
+
+@include tablet-media;
+
+
+
+
+
+
+
+

@@ -1,0 +1,69 @@
+.header {
+   position: absolute;
+   width: 100%;
+   padding: 56px 0;
+
+   &__content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      // @include flex-box(space-around, center);
+   }
+
+   &__logo {
+      @include flex-box(center, center);
+   } 
+
+   &__list {
+      @include flex-box(flex-end, center);
+   }
+
+   &__item {
+      margin: 0 4px;
+
+   }
+   
+   &__link {
+      text-transform: uppercase;
+      color: $third;
+      padding: 11px 16px;
+      display: block;
+
+      &:hover {
+         background-color: $primary;
+         border-radius: 4px;
+      }
+   }
+   &__burger-icon {
+      display: none;
+
+   }
+   &__burger-icon path {
+      fill: $third;
+   }
+
+}
+/*Main*/
+
+.intro {
+   height: 100vh;
+   background-color: $twenty-third;
+   @include flex-box(column, center, center);
+
+
+   &__title {
+      color: #f7f3ea;
+      font-weight: 700;
+      text-align: center;
+      font-size: 42px;
+   }
+
+   &__btn {
+      margin-top: 53px;
+
+      &:hover {
+         background-color: $twenty-fourth;
+      }
+
+   }
+}
