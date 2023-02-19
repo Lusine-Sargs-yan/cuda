@@ -8,4 +8,4 @@
 - media queries
 - BEM
 
-####  https://github.com/Lusine-Sargs-yan/cuda.git
+####  https://lusine-sargs-yan.github.io/cuda/
